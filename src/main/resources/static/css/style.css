@@ -1,0 +1,8 @@
+body {
+    background: url(../images/background.jpg) #f8f6e9 no-repeat;
+    background-size: cover;
+}
+
+.login-input {
+    margin: auto;
+}
