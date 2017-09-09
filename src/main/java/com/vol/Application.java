@@ -28,7 +28,6 @@ public class Application {
 
     private static Logger logger = LogManager.getLogger(Application.class);
 
-    @Bean(initMethod = "init", destroyMethod = "close")
     @ConfigurationProperties(prefix = "spring.datatsource")
     public DataSource dataSource() {
         return new DruidDataSource();
