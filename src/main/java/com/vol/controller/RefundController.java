@@ -31,7 +31,7 @@ public class RefundController {
     }
 
     @RequestMapping(value = "/refundListByExample", method = RequestMethod.GET)
-    public String queryRefundListByExample(@RequestParam("page") int page, @RequestParam("pageSize") int pageSize, @RequestBody PltmRefund refund, Model model) {
+    public String queryRefundListByExample(@RequestParam("page") int page, @RequestParam("pageSize") int pageSize, @ModelAttribute("refund") PltmRefund refund, Model model) {
         model.addAttribute("refundlist", refundService.queryRefundListByExample(refund, page, pageSize));
         return "refund/list";
     }
