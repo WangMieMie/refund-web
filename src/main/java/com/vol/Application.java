@@ -14,7 +14,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
-
 /**
  * @Class Application
  * @Descriptions 程序入口
@@ -33,16 +32,13 @@ public class Application {
         return new DruidDataSource();
     }
 
-    /**
-     * Main Start
-     */
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-        logger.info("============= SpringBoot Start Success =============");
-    }
-
     @Bean
     public PlatformTransactionManager transactionManager() {
         return new DataSourceTransactionManager(dataSource());
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+        logger.info("============= SpringBoot Start Success =============");
     }
 }
