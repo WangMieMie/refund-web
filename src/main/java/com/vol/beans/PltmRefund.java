@@ -16,17 +16,13 @@ public class PltmRefund {
     private long id;
     private String pltmcode;
     private String shopcode;
-    private String refundid;
+    private String refundId;
     private String tid;
     private String oid;
-    @Column(name = "refund_status")
     private String refundStatus;
-    @Column(name = "refund_reason")
-    private String refundreason;
+    private String refundReason;
     private float refundFee;
-    @Column(name = "is_returngoods")
     private int isReturnGoods;
-    @Column(name = "refund_date")
     private String refundDate;
 
     public long getId() {
@@ -53,12 +49,12 @@ public class PltmRefund {
         this.shopcode = shopcode;
     }
 
-    public String getRefundid() {
-        return refundid;
+    public String getRefundId() {
+        return refundId;
     }
 
-    public void setRefundid(String refundid) {
-        this.refundid = refundid;
+    public void setRefundId(String refundId) {
+        this.refundId = refundId;
     }
 
     public String getTid() {
@@ -85,12 +81,12 @@ public class PltmRefund {
         this.refundStatus = refundStatus;
     }
 
-    public String getRefundreason() {
-        return refundreason;
+    public String getRefundReason() {
+        return refundReason;
     }
 
-    public void setRefundreason(String refundreason) {
-        this.refundreason = refundreason;
+    public void setRefundReason(String refundReason) {
+        this.refundReason = refundReason;
     }
 
     public float getRefundFee() {
